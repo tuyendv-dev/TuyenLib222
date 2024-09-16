@@ -48,8 +48,8 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "github.com.tuyendv-dev"
-                artifactId = "Library2"
+                groupId = "com.github.tuyendv-dev"
+                artifactId = "library2"
                 version = "1.0.0"
             }
         }
