@@ -49,8 +49,36 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "com.github.tuyendv-dev"
-                artifactId = "library1"
+                artifactId = "Library1"
                 version = "1.0.0"
+
+                // Configure the generated POM
+                pom {
+                    name.set("Library1")
+                    description.set("An awesome Android library1.")
+                    url.set("https://github.com/tuyendv-dev/TuyenLib222")
+
+                    licenses {
+                        license {
+                            name.set("The Apache License, Version 2.0")
+                            url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        }
+                    }
+
+                    developers {
+                        developer {
+                            id.set("tuyendv-dev")
+                            name.set("Doan Tuyen")
+                            email.set("developer@example.com")
+                        }
+                    }
+
+                    scm {
+                        connection.set("scm:git:git://github.com/tuyendv-dev/TuyenLib222.git")
+                        developerConnection.set("scm:git:ssh://github.com/tuyendv-dev/TuyenLib222.git")
+                        url.set("https://github.com/tuyendv-dev/TuyenLib222")
+                    }
+                }
             }
         }
     }
